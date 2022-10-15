@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    min-height: 80vh;
+     align-items: center;
+    justify-content: center; 
+}
+.wraper{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /* background-color: red; */
+}
+span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    animation: rotate 5s linear infinite;
+    animation-delay: calc(0.15s *var(--i)); 
+
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+.bubble{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: size 2s linear infinite;
+    animation-delay: calc(0.15s *var(--i));
+}
+@keyframes size {
+0%{
+    filter: hue-rotate(0deg);
+
+}
+90%{
+    transform: scale(15);
+    filter: hue-rotate(720deg);
+}
+
+}
